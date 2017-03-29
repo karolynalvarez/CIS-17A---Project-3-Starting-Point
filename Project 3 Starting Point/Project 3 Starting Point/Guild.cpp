@@ -32,10 +32,15 @@ void Guild::AddWarrior(std::string name)
 	_warriors.push_back(warrior);
 }
 
+void Guild::AddAdventurer(std::shared_ptr<Adventurer> newAdventurer)
+{
+	_adventurers.push_back(newAdventurer); 
+}
+
 std::string Guild::GetInfo()
 {
 	std::string output = "Your guild has: \n";	
-
+	
 	output += _mages.size()		> 0 ? std::to_string(_mages.size()) + " mages\n" : "No mages!\n";
 	output += _rangers.size()	> 0 ? std::to_string(_rangers.size()) + " rangers\n" : "No rangers!\n";
 	output += _warriors.size()	> 0 ? std::to_string(_warriors.size()) + " warriors\n" : "No warriors!\n";
@@ -90,9 +95,8 @@ std::string Guild::AttackWithWarriors()
 std::string Guild::AttackWithAllAdventurers()
 {
 	std::string output = "You command everyone to attack! \n";
-	output += AttackWithMages();
-	output += AttackWithPaladins();
-	output += AttackWithRangers();
-	output += AttackWithWarriors();
+	for (auto adventurer : _adventurers) {
+		output += adventurer->Attack() + " \n";
+	}
 	return output;
 }

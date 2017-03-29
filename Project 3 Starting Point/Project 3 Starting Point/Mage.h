@@ -1,4 +1,5 @@
 #pragma once
+#include "Adventurer.h"
 #include <string>
 class Mage
 {
