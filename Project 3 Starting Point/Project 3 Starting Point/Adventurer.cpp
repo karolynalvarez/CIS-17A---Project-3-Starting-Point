@@ -1,7 +1,7 @@
 #include "Adventurer.h"
 
 
-Adventurer::Adventurer(std::string name): _name(name)
+Adventurer::Adventurer(std::string name, int type): _name(name), _type(type)
 {
 }
 
