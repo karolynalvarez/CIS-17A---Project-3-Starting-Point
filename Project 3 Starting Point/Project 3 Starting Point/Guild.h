@@ -14,16 +14,19 @@ private:
 	std::vector<std::shared_ptr<Adventurer>>_adventurers; 
 	std::string _name;
 	int _gold = 0;
+	int allMages, allWarriors, allRangers, allPaladins = 0;
 
 public:
 	Guild(std::string name);
 	~Guild();
-	
 	std::string GetName() const { return _name; }
-	void AddAdventurer(std::shared_ptr<Adventurer> );
+	void AddAdventurer(std::string name, int type);
 
 	std::string GetInfo();
-
+	std::string AttackWithMages();
+	std::string AttackWithRangers();
+	std::string AttackWithPaladins();
+	std::string AttackWithWarriors();
 	std::string AttackWithAllAdventurers();
 
 };
