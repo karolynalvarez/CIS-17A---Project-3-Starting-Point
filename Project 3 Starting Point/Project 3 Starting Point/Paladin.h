@@ -1,15 +1,12 @@
 #pragma once
 #include <string>
 #include "Adventurer.h"
-class Paladin
-{
-private:
-	std::string _name;
+class Paladin:public Adventurer{
+
 public:
-	Paladin(std::string name);
+	Paladin(std::string name, int);
 	~Paladin();
 
-	std::string GetName() const { return _name; }
-	std::string Attack() { return _name + " swings a giant maul at his foes!"; }
+	std::string Attack() { return " swings a giant maul at his foes!\n"; }
 };
 

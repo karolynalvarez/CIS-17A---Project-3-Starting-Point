@@ -14,7 +14,10 @@ private:
 	std::vector<std::shared_ptr<Adventurer>>_adventurers; 
 	std::string _name;
 	int _gold = 0;
-	int allMages, allWarriors, allRangers, allPaladins = 0;
+	int allMages = 0; 
+	int allWarriors = 0;
+	int allRangers = 0; 
+	int allPaladins = 0;
 
 public:
 	Guild(std::string name);

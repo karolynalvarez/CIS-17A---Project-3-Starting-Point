@@ -47,7 +47,7 @@ std::string Guild::AttackWithMages()
 	if (_adventurers.size() > 0) {
 		for (auto d : _adventurers) {
 			if (d->GetType() == 1){
-				output += "Your powerful mages, " + d->GetName() + ", says, ";
+				output += "Your powerful mages, " + d->GetName() + ", ";
 				output += d->Attack() + "\n\n";
 			}
 		}
@@ -61,7 +61,7 @@ std::string Guild::AttackWithPaladins()
 	if (_adventurers.size() > 0) {
 		for (auto d : _adventurers) {
 			if (d->GetType() == 1) {
-				output += "Your unstoppable paladin, " + d->GetName() + ", says, ";
+				output += "Your unstoppable paladin, " + d->GetName() + ", ";
 				output += d->Attack() + "\n\n";
 			}
 		}
@@ -75,7 +75,7 @@ std::string Guild::AttackWithRangers()
 	if (_adventurers.size() > 0) {
 		for (auto d : _adventurers) {
 			if (d->GetType() == 1) {
-				output += "Your determined ranger, " + d->GetName() + ", says, ";
+				output += "Your determined ranger, " + d->GetName() + ", ";
 				output += d->Attack() + "\n\n";
 			}
 		}
@@ -89,7 +89,7 @@ std::string Guild::AttackWithWarriors()
 	if (_adventurers.size() > 0) {
 		for (auto d : _adventurers) {
 			if (d->GetType() == 1) {
-				output += "Your relentless warrior, " + d->GetName() + ", says, ";
+				output += "Your relentless warrior, " + d->GetName() + ", ";
 				output += d->Attack() + "\n\n";
 			}
 		}
@@ -102,25 +102,25 @@ std::string Guild::AttackWithAllAdventurers()
 	std::string output = "You command everyone to attack! \n";
 	for (auto adventurer : _adventurers) {
 		if (adventurer->GetType() == 1) {
-			output += "Mage, " + adventurer->GetName() + " yells, ";
+			output += "Mage, " + adventurer->GetName() + " , ";
 			output += adventurer->Attack();
 		}
 	}
 	for (auto adventurer : _adventurers) {
 		if (adventurer->GetType() == 2) {
-			output += "Ranger, " + adventurer->GetName() + " yells, ";
+			output += "Ranger, " + adventurer->GetName() + " , ";
 			output += adventurer->Attack();
 		}
 	}
 	for (auto adventurer : _adventurers) {
 		if (adventurer->GetType() == 3) {
-			output += "Paladin, " + adventurer->GetName() + " yells, ";
+			output += "Paladin, " + adventurer->GetName() + " , ";
 			output += adventurer->Attack();
 		}
 	}
 	for (auto adventurer : _adventurers) {
 		if (adventurer->GetType() == 4) {
-			output += "Warrior, " + adventurer->GetName() + " yells, ";
+			output += "Warrior, " + adventurer->GetName() + " , ";
 			output += adventurer->Attack();
 		}
 	}
